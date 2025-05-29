@@ -1,0 +1,13 @@
+streamlit==1.31.1
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+mysql-connector-python
+groq==0.4.2
+langchain-groq
+psycopg2
+flask 
+flask-session
+flask-cors
+py-eureka-client

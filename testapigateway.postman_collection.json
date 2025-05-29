@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "70c6e259-59cb-4e78-abcd-ca28d4678884",
+		"name": "testapigateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35361532"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test999_09@gmail.com\",\r\n  \"password\": \"140203\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/userservice/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"userservice",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test999_09@gmail.com\",\r\n  \"password\": \"140203\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/userservice/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"userservice",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0OTk5XzA5QGdtYWlsLmNvbSIsInNjb3BlIjoiVVNFUiIsImV4cCI6MTczMjg2MTgzMSwiaWF0IjoxNzMyMjU3MDMxLCJ1c2VySWQiOjIyLCJqdGkiOiI1ZDA2OTFlYi1iMzUyLTRkZTUtYmQ2Ni03ZjBmMTZkNzBkMWEifQ.Lxd44kdYIbCSBj60wj9re1BkV_XTY1pebolI8LkTJLWMTpQ-nU81EjM_n_6vTDLIgbSEc8JZ1RGRe7V5WDCjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 22,\r\n    \"type\": \"sql\",\r\n    \"dbms\": \"postgresql\",\r\n    \"host\": \"localhost\",\r\n    \"port\": \"5432\",\r\n    \"username\": \"postgres\",\r\n    \"password\":\"140203\",\r\n    \"databaseName\": \"pagila\",\r\n    \"status\":\"conected\",\r\n    \"chatHistoryDtos\": [\r\n    {\r\n      \"sender\": \"AI\",\r\n      \"content\": \"How can can i help you\",\r\n      \"time\": \"2023-10-10T10:00:00\"\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/chatroom/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"chatroom",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showroom",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0OTk5XzA5QGdtYWlsLmNvbSIsInNjb3BlIjoiVVNFUiIsImV4cCI6MTczMjg2MTgzMSwiaWF0IjoxNzMyMjU3MDMxLCJ1c2VySWQiOjIyLCJqdGkiOiI1ZDA2OTFlYi1iMzUyLTRkZTUtYmQ2Ni03ZjBmMTZkNzBkMWEifQ.Lxd44kdYIbCSBj60wj9re1BkV_XTY1pebolI8LkTJLWMTpQ-nU81EjM_n_6vTDLIgbSEc8JZ1RGRe7V5WDCjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/nlptosqlservice/connect_chat/95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"nlptosqlservice",
+						"connect_chat",
+						"95"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0OTk5XzA5QGdtYWlsLmNvbSIsInNjb3BlIjoiVVNFUiIsImV4cCI6MTczMjg2MTgzMSwiaWF0IjoxNzMyMjU3MDMxLCJ1c2VySWQiOjIyLCJqdGkiOiI1ZDA2OTFlYi1iMzUyLTRkZTUtYmQ2Ni03ZjBmMTZkNzBkMWEifQ.Lxd44kdYIbCSBj60wj9re1BkV_XTY1pebolI8LkTJLWMTpQ-nU81EjM_n_6vTDLIgbSEc8JZ1RGRe7V5WDCjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"room_id\":95,\r\n    \"query\": \"Find most rented films\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/nlptosqlservice/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"nlptosqlservice",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_close",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0OTk5XzA5QGdtYWlsLmNvbSIsInNjb3BlIjoiVVNFUiIsImV4cCI6MTczMjg2MTgzMSwiaWF0IjoxNzMyMjU3MDMxLCJ1c2VySWQiOjIyLCJqdGkiOiI1ZDA2OTFlYi1iMzUyLTRkZTUtYmQ2Ni03ZjBmMTZkNzBkMWEifQ.Lxd44kdYIbCSBj60wj9re1BkV_XTY1pebolI8LkTJLWMTpQ-nU81EjM_n_6vTDLIgbSEc8JZ1RGRe7V5WDCjMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomId\":95\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/nlptosqlservice/save_close",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"nlptosqlservice",
+						"save_close"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

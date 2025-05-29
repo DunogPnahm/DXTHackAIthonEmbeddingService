@@ -1,0 +1,31 @@
+tạo database rỗng user
+
+tạo database rỗng chatroomservicev2
+
+tạo database nltosqlservice
+-- Table: room
+CREATE TABLE room (
+    roomId INT PRIMARY KEY,
+    userId VARCHAR(255) NOT NULL,
+    type VARCHAR(255),
+    dbms VARCHAR(50),
+    host VARCHAR(255),
+    port INT,
+    username VARCHAR(255),
+    databaseName VARCHAR(255),
+    password VARCHAR(255),
+    status VARCHAR(255)
+);
+
+-- Table: chat_history
+CREATE TABLE chat_history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender VARCHAR(255) NOT NULL,
+    content TEXT,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status_insert VARCHAR(45),
+    room_id INT,
+);
+
+
+trong python nlp-to-sql-service có hướng dẫn riêng
