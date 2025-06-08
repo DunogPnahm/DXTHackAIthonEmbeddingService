@@ -1,2 +1,0 @@
-conda create --name chatsqlbackend python=3.10
-conda activate chatsqlbackend
